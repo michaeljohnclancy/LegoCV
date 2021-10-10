@@ -35,11 +35,3 @@ LegoCV is native OpenCV framework built for Swift and Objective-C projects. It e
   
   s.frameworks = 'UIKit'
 end
-
-post_install do |pi|
-    pi.pods_project.targets.each do |t|
-        t.build_configurations.each do |config|
-            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.1'
-        end
-    end
-end
